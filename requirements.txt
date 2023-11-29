@@ -1,0 +1,6 @@
+Flask: pip install flask
+Flask-Login: pip install flask-login
+Requests: pip install requests
+Python-dotenv: pip install python-dotenv
+Virtualenv: pip install virtualenv (for creating and managing virtual environments)
+Chart.js: (Included via CDN in the HTML file, not installed via pip)

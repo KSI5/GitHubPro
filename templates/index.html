@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHubStatPro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="GitHub Logo" class="img-fluid">
+                <h3>GitHubStatPro</h3>
+            </div>
+            <div class="custom-paragraph">
+                <p class="mb-0"><em>"Unlock the power of your GitHub statistics with GitHubStatPro"</em></p>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('login') }}" method="post">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </form>
+            </div>
+            <div class="card-footer text-muted text-center">
+                <p>&copy; 2023 - Christopher Igebu. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
